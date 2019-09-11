@@ -3,5 +3,5 @@
   "author": "mayli",
   "main": "rtv.RockTheVotePlugin",
   "description": "A plugin to change map by /rtv.",
-  "version": 1.0
+  "version": 1.1
 }
