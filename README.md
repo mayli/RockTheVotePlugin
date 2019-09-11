@@ -15,6 +15,6 @@ List your currently installed plugins by running the `plugins` command.
 
 ### Todo
 
-[] /nominate
-[] vote maps
-[] vote to keep current map
+- [ ] /nominate
+- [ ] vote maps
+- [ ] vote to keep current map
