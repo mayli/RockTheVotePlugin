@@ -1,7 +1,7 @@
 {
-  "name": "ExamplePlugin",
-  "author": "Anuke",
-  "main": "example.ExamplePlugin",
-  "description": "A plugin to demonstrate some basic features.",
+  "name": "RockTheVotePlugin",
+  "author": "mayli",
+  "main": "rtv.RockTheVotePlugin",
+  "description": "A plugin to change map by /rtv.",
   "version": 1.0
 }
