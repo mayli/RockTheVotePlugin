@@ -2,14 +2,14 @@ package rtv;
 
 import java.util.HashSet;
 
-import io.anuke.arc.*;
-import io.anuke.arc.util.*;
-import io.anuke.mindustry.entities.type.*;
-import io.anuke.mindustry.game.Team;
-import io.anuke.mindustry.game.EventType.*;
-import io.anuke.mindustry.gen.*;
-import io.anuke.mindustry.plugin.Plugin;
-import io.anuke.mindustry.Vars;
+import arc.*;
+import arc.util.*;
+import mindustry.entities.type.*;
+import mindustry.game.Team;
+import mindustry.game.EventType.*;
+import mindustry.gen.*;
+import mindustry.plugin.Plugin;
+import mindustry.Vars;
 
 public class RockTheVotePlugin extends Plugin {
 
