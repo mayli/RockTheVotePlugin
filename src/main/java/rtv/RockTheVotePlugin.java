@@ -19,7 +19,22 @@ public class RockTheVotePlugin extends Plugin {
 
     // register event handlers and create variables in the constructor
     public RockTheVotePlugin() {
+        // un-vote on player leave
+        Events.on(PlayerLeave.class, e-> {
+            Player player = e.player;
+            int cur = this.votes.size();
+            int req = (int) Math.ceil(ratio * Vars.playerGroup.size());
+            if(votes.contains(player)) {
+                votes.remove(player);
+                Call.sendMessage("RTV: [accent]" + player.name + "[] left, [green]" + cur + "[] votes, [green]" + req + "[] required");
+            }
+        });
+        // clear votes on game over
+        Events.on(GameOverEvent.class, e -> {
+            this.votes.clear();
+        });
     }
+    
 
     //register commands that player can invoke in-game
     @Override
