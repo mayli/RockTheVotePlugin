@@ -4,12 +4,10 @@ import java.util.HashSet;
 
 import arc.*;
 import arc.util.*;
-import mindustry.entities.type.*;
 import mindustry.game.Team;
 import mindustry.game.EventType.*;
 import mindustry.gen.*;
-import mindustry.plugin.Plugin;
-import mindustry.Vars;
+import mindustry.mod.*;
 
 public class RockTheVotePlugin extends Plugin {
 
@@ -23,7 +21,7 @@ public class RockTheVotePlugin extends Plugin {
         Events.on(PlayerLeave.class, e-> {
             Player player = e.player;
             int cur = this.votes.size();
-            int req = (int) Math.ceil(ratio * Vars.playerGroup.size());
+            int req = (int) Math.ceil(ratio * Groups.player.size());
             if(votes.contains(player)) {
                 votes.remove(player);
                 Call.sendMessage("RTV: [accent]" + player.name + "[] left, [green]" + cur + "[] votes, [green]" + req + "[] required");
@@ -42,7 +40,7 @@ public class RockTheVotePlugin extends Plugin {
 
         //register a simple reply command
         handler.<Player>register("rtv", "[off]", "Rock the vote to change map", (args, player) -> {
-            if (player.isAdmin){
+            if (player.admin()){
                 if (args.length == 1 && args[0].equals("off")) {
                     this.enable = false;
                 } else {
@@ -55,7 +53,7 @@ public class RockTheVotePlugin extends Plugin {
             }
             this.votes.add(player);
             int cur = this.votes.size();
-            int req = (int) Math.ceil(ratio * Vars.playerGroup.size());
+            int req = (int) Math.ceil(ratio * Groups.player.size());
             Call.sendMessage("RTV: [accent]" + player.name + "[] wants to change the map, [green]" + cur +
                 "[] votes, [green]" + req + "[] required");
 
