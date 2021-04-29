@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: gradle
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: com.github.Anuken.Mindustry:core
+    versions:
+    - "125.1"
+    - v123.1
+    - v124.1
+  - dependency-name: com.github.Anuken.Arc:arc-core
+    versions:
+    - "125.1"
+    - v123.1
+    - v124.1
